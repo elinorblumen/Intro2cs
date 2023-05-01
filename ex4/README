@@ -1,0 +1,39 @@
+
+ElinorB
+
+==============================
+=  README for ex4 : Hangman  =
+==============================
+
+This exercise consists of four main functions:
+
+a. Update word pattern
+b. Run single game
+c. Filter words list
+d. Choose letter
+
+==================
+=  Description:  =
+==================
+
+
+1. A function meant to receive a word, letter and a pattern.
+ If the letter shows in the word, return an updated pattern
+ containing the letter in the correct spots.
+
+2 . A function meant to receive a word list and run a single
+ game.
+
+3. A function meant to receive a list of words, a pattern 
+and a wrong guess list and return an updated list of
+‘good words’, that follow the criteria.
+
+4. A function meant to return the most common letter in a 
+List of words, and return one that doesn’t show in the
+ pattern.
+
+
+
+
+
+

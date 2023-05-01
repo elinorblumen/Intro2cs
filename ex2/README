@@ -1,0 +1,28 @@
+
+ElinorB
+
+================================
+=  README for ex2: Conditions  =
+================================
+
+This exercise consists of six programs:
+
+a. convert_spoons_to_cup.py
+b. calculate_mathematical_expression.py
+c. largest_and_smallest.py
+d. quadratic_equation.py
+e. shapes.py
+f. temperature.py
+
+==================
+=  Description:  =
+==================
+
+a. A simple program to convert number of spoons to number of cups based on a given ratio.
+b. Calculates a basic mathematical expression (add, subtract, multiply, divide). also contains a function
+   that receives a string from the user describing such expression and feeds it to the calculating function.
+c. Finds the largest and smallest numbers among a set of three numbers
+d. Solve a given quadratic equation. also contains a function for user input of the equation and output
+   of the solutions to the standard output.
+e. Calculate the area of a given shape (circle, rectangle, trapezoid) based on user input of the shape and dimensions.
+f. Check whether at least two out of three temperatures have exceeded a certain threshold.

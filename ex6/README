@@ -1,0 +1,66 @@
+
+ElinorB
+
+================================
+=  README for ex6 : Recursion  =
+================================
+
+
+This exercise consists of ten main functions:
+
+
+a. print_to_n
+b. print_reversed
+c. is_prime
+d. divisors
+e. exp_n_x
+f. play_hanoi
+g. print_binary_sequences
+h. print_sequences
+i. print_no_repetition_sequences
+j. no_repetition_sequences_list
+
+
+==================
+=  Description:  =
+==================
+
+
+a. Function meant to receive an integer n and print all integers from 1 to n
+   in increasing order.
+
+b. Function meant to receive an integer n and print all integers from n to 1 in
+   decreasing order.
+
+c. Function meant to receive an integer n and return True if n is a prime number
+   and False otherwise.
+
+d. Function meant to receive an integer n and return a list of all numbers from 1 to
+   n's absolute value that divide n.
+
+e. Function receives a non-negative int n and a reel number x
+   and returns the exponential sum of x with relation to n.
+
+f. Function receives given number of discs, definition of source pole, destination pole,
+   and temporary pole. and solves the 'Game of Hanoi' for the given parameters.
+
+g. Function meant to receive a non negative integer n and print all
+   possible sequences of 0's and 1's who's length equals n.
+
+h. Function receives a list of characters and a non negative integer
+   and prints all possible combinations of characters from the list,
+   who's length is equals n.
+   Functions uses 'print_sequences_with_prefix' function.
+
+i. Function receives a list of characters and an integer n and prints
+   all possible sequences of letters from the the list who's length
+   equals n and in which non of the characters repeats itself.
+
+j. Function meant to receive a list of characters and a non-negative integer n
+   and return a list of all possible sequences of characters from the list who's
+   length equals n and non of the characters repeats itself.
+
+
+
+
+

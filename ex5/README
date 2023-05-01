@@ -1,0 +1,209 @@
+
+ReutB, ElinorB
+
+We discussed the exercise with: None
+==============================
+=  README for ex5: Crossword =
+==============================
+An exercise in which we created a code running from the command line meant to find hiding words in given matrices.
+The script running the code from command line is:
+ "python3 crossword.py* <word_file.txt> <mat.txt> <output.txt> <directions>**"
+* if we want to search in 3d matrix we'll use "crossword3d.ph" instead
+** Directions: While applying crossword.py are: {'u','d','r','l','w','x','y','z'}, and while applying 
+crossword3d.py: {‘a’,’b’,’c’}.
+
+==================
+=  Description:  =
+==================
+
+Description for functions used both in crossword.py and in crossword3d.py:
+
+main(args):
+   
+     Function is meant to receive arguments from user and check if all needed arguments are there and valid.
+     If arguments are missing or not valid, the function will print specific error messages.
+     Otherwise, the function will import the files given as arguments and organise the information in the files
+     as ordered lists.
+     The function will then run the main operation of the program using other functions.
+     :param args: Input from user (via command line)
+
+
+valid_directions_check(string):
+    
+    check whether the directions inserted in sys were valid
+    :param string = sys.argv[DIRECTION_PARAM]
+    :return: False if the directions are not valid.
+
+
+divide_to_lines(all_matrix_low):
+    
+    A function meant to receive a list of letters derived from a matrix and return
+    a list organized as lines w/o commas
+    :param all_matrix_low: the matrix w/ lower case
+    :return: The matrix organized as lines
+
+mirror_line(line_string):
+    
+    function that reverse the given string
+    :param line_string: string
+    :return: revered string
+
+
+mirror_lines_matrix(all_matrix_low):
+    
+    reverse all matrix lines
+    :param all_matrix_low: the matrix w/ lower case
+    :return: mirrored matrix's lines
+
+
+mirror_all_lines_lst(list_of_lines):
+    
+    reverse all given line in line list
+    :param list_of_lines: list of lists of strings
+    :return: mirrored lines list
+
+
+divide_to_columns(all_matrix_low):
+    
+    A function meant to receive a list of letters derived from a matrix and return
+    a list organized as columns
+    :param all_matrix_low: A list of letters without commas
+    :return: The list organized as columns
+
+
+divide_to_columns(all_matrix_low):
+    
+    A function meant to receive a list of letters derived from a matrix and return
+    a list organized as columns
+    :param all_matrix_low: A list of letters without commas
+    :return: The list organized as columns
+
+
+divide_to_diagonal_d_to_l(all_matrix_low):
+    
+    A function meant to receive a list of letters derived from a matrix and return
+    a list organized as up to down left lists (start from north-west corner)
+    :param all_matrix_low
+    :return: The list organized as down to left lines
+
+
+divide_to_diagonal_d_to_r(all_matrix_low):
+    
+    A function meant to receive a list of letters derived from a matrix and return
+    a list organized as up to down right lists (start from north-east corner)
+    :param all_matrix_low
+    :return: The list organized as down to right lines
+
+
+lst_to_concat_line_lst(list_of_lines):
+    
+    A function that receives a list of lists of non concatenated letters
+    and returns a list of concatenated lists.
+    :param list_of_lines: List of lines of letters
+    :return: A list of lists of concatenated strings
+
+
+----------------------------------------------------------------------------
+
+Functions used only in crossword.py:
+
+
+run_crossword(original_word_list, original_matx, output_file, directions):
+    
+    run the program to search words in given matrix and returns the words that was founded w/ num of founds
+    in matrix according to given directions
+    :param original_word_list:list of all words to search in matrix in lower-cases letters
+    :param original_matx: lower-cases letters matrix
+    :param output_file: txt file
+    :param directions: string of valid directions
+    :return: new output.txt file with list of words found and times they were founded organized in alpha-bet order.
+
+
+
+histogram(list_of_lines, word_list_low, output_file):
+    
+    A function meant to receive a list of lists representing the lines\
+    diagonals in a given matrix and a list of words. The function returns a
+    an alphabetically ordered list representing the words from the list
+    of words that appear in the given lines,
+    and how many times each word appeared.
+
+    :param output_file: txt file to write results on
+    :param list_of_lines: list of strings lines to check
+    :param word_list_low: A list of words
+    :return: An alphabetically ordered list of the words from the list
+    that appear in the matrix, and how many times each appeared.
+
+
+----------------------------------------------------------------------------
+
+Functions used only in crossword3d.py:
+
+
+divide_to_matrices(all_matrix_low):
+    
+    A function meant to receive a list of matrices organized as lists of letters
+    and return a list of lists of letters organized w/o commas
+    :param The one and only original 3dmatrix
+    :return: The 3dmatrix organized as 2dmatrices w/o commas
+
+
+slice_matrix3d(matrix3d, directions):
+    
+    A function meant to receive a 3dmatrix organized as lists of lists without commas and directions for the search
+    and return a list of lists containing the 2dmatrices organized according to the specific directions.
+
+    :param matrix3d: A 3dmatrix organized as 2dmatrices without commas
+    :param directions: Direction "abc"
+    :return: list of lists containing the 2dmatrices organized according to the specific directions
+
+
+run_crossword(word_list, matrix, output_dict, output_file, directions):
+    
+    Run the program to search words in given matrix and returns the words that were found w/ num of founds
+    in matrix according to given directions
+    :param original_word_list: list of all words to search in matrix in lower-cases letters
+    :param matrix: lower-case letters matrix
+    :param output_file: txt file
+    :param directions: string of valid directions
+    :return: new output.txt file with list of words found and times they were founded organized in alpha-bet order.
+
+
+histogram(list_of_lines, word_list_low, output_dict):
+    
+    A function meant to receive a list of lists representing the lines\
+    diagonals in a given matrix and a list of words, a list of words
+    to search for and a dictionary. The function checks if each
+    word from the list is in the lists of lines and orgenises the information in a dictionary
+    that contains only the word that appear in the lines and how many times each appeared.
+
+    :param output_dict: Dictionary
+    :param list_of_lines: list of strings lines to check
+    :param word_list_low: A list of words
+
+
+write_output(output_dict, output_file):
+    
+    function for writing and sorted the words founded in histogram() in an output file
+     while sorting the words in an alphabetic order
+    :param output_dict: Dictionary
+    :param output_file: txt file
+    :return: the updated output file
+
+
+======================
+=  Special Comments  =
+======================
+
+In this exercise we practiced using loops, sys and os module, files, dictionaries
+ and modularity in code. As we started writing the code we both were unfamiliar 
+with most practices and got to learn as we wrote more lines (but mostly as we erase
+ more lines :).
+We believe our final code does not project the best code we could’ve written
+ (especially in terms of modularity- we learned in retrospect the importance of writing
+A modular code), but given the time we had for this exercise, we did the best we could and took
+some important lessons with us.
+
+
+
+

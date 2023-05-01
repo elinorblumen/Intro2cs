@@ -1,0 +1,66 @@
+
+ElinorB
+
+======================================
+=  README for ex10 : Priority Queue  =
+======================================
+
+This exercise consists of three main classes:
+
+a. Node
+b. Priority Queue
+c. Priority queue iterator
+
+==================
+=  Description:  =
+==================
+
+====
+Node
+====
+
+Built from initiator function and mainly getters and setters.
+Has_next(): checks wether node has “next” node after him
+
+
+==============
+Priority Queue
+==============
+
+Class that holds most of assignments, explanation is in doctoring.
+
+
+=======================
+Priority Queue Iterator
+=======================
+
+A class meant to implement an iterator object of a queue object.
+
+
+==================
+=  Questions:  =
+==================
+
+
+1. The function should raise Stop Iteration, since our pointer should now point
+On None and hasn’t been redirected to the beginning. Another call will print None
+Since we’re going over an empty iterator.
+
+2. The difference between this implementation and the one before is that ,while 
+calling the iter function with the first implementation you would move the pointer
+that is in our queue field, When finishing an iteration our pointer would point
+at None and doesn’t return to the start of the queue.
+With the new implementation with each call for the iteration function of the queue
+you actually start a new iteration over the queue and each time the pointer is set 
+at his starting node.
+
+3. Add function complexity will be around n^2 since for every task from the n tasks
+We will need to go over other maximum n tasks (worst case).
+
+4. __eq__ function complexity will be around n since we go over couples of tasks, one from 
+Each queue together, overall, maximum n tasks.
+
+
+
+
+

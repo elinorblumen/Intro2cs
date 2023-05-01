@@ -1,0 +1,62 @@
+
+ElinorB
+GilS
+
+We discussed the exercise with: None
+
+================================
+=  README for ex8 : Asteroids  =
+================================
+
+
+This exercise consists of four main files:
+
+
+a. Asteroids main
+
+b. Torpedo
+
+c. Asteroids
+
+d. Ship
+
+
+==================
+=  Description:  =
+==================
+
+
+a. File containing class Game runner that holds all the   information on all the different classes and objects during  the game and containing most of the methods that are used to run a game.
+File also contains the main function that runs the game (game_loop). 
+
+b. File containing class torpedo and all it’s methods.
+
+c. File containing class asteroids and all it’s methods.
+
+d. File containing class ship and all it’s methods.
+
+
+================
+=  Questions:  =
+================
+
+
+שלושה שיקולים שהיו לנו בעיצוב המשחק:
+א. התלבטנו איזה מבנה נתונים לבחור לאסטרואידים ולטורפדואים.
+לבסוף החלטנו להשתמש ברשימות שכן, הבנן שלא יהיה לנו צורך
+בשליפה מהירה של האובייקטים אלא באיטרציה שלהם ורשימות
+הן מבנה נתונים יותר מתאים לצורך זה. שכן הן איטרביליות.
+
+ב. האם לחלק את הפונקצייה הראשית ‪(‬game loop‪)‬
+לכמה שיותר פונקציות קטנות.
+לבסוף החלטנו שאת האופרציות והפרטים שדורשים חלק יותר
+גדול בקוד נרשום בפונקציות נפרדות אבל את החלק העיקרי
+של הקוד כתבנו ברצף בפונקצייה הראשית תוך כדי שימוש בפונקציות 
+העזר על מנת לחסוך בשורות קוד מיותרות.
+
+ג. התלבטנו באיזה שלב צריך למחוק את הטורפדואים בפונקצייה הראשית ‪(‬game loop‪)‬
+ כך שלא תתבצע קריאה לאחר מכן לטורפדו שלא קיים. לכן החלטנו להפריד 
+את שתי השלבים בהם יש שימוש ברשימה של 
+הטורפדואים ושבהם ייתכן ותתבצע מחיקה של טורפדו.
+בצורה זו עבור כל אחד מהשלבים הרשימה בה האיטרטור משתמש
+היא הרשימה המעודכנת עם הטורפדויים הקיימים.
