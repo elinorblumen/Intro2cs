@@ -1,7 +1,7 @@
 ######################################################################################################
 # FILE : crossword3d.py
 # WRITERS : ElinorB, ReutB
-# EXERCISE : Intro2cs ex5 2018
+# EXERCISE : Intro2cs ex5 
 # DESCRIPTION : Crossword through 3d matrices
 ######################################################################################################
 
